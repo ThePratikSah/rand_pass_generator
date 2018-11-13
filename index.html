@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Password Generator    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="app-title">Random Password<br>Generator</h1>
+        <!-- name input field -->
+        <div class="input-field col s6">
+            <input placeholder="First Name" id="first_name" type="text" class="validate">
+            <input placeholder="DOB - ddmmyyyy" id="dob" type="text" class="datepicker">
+            <div class="row">
+                <div class="col"><button class="waves-effect waves-light btn" onclick="randomStr()">Generate</button></div>
+                <div class="col"><button class="waves-effect waves-light btn" onclick="reset()">Reset</button></div>
+            </div>
+        </div>
+        <div class="get-pass">
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card-panel teal">
+                        <p style="text-align:center" id="text_p" class="white-text">Type to generate password</p>
+                        <p class="white-text copy-pass" id="password"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright section -->
+        <p class="small mb-4 text-dark credit">&copy; 2018 Copyright. Pratik Sah</p>
+    </div>
+
+    <!-- all the js files here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function randomStr(){
+            var x = document.getElementById("first_name").value;
+            var y = document.getElementById("dob").value;
+            var z = y.toString();
+            s = '', r = x + y + '!%&*(_{]';
+            for (var i = 0; i < 15; i++) {
+                s += r.charAt(Math.floor(Math.random() * r.length));
+            }
+            document.getElementById("password").innerHTML = s;document.getElementById('text_p').innerHTML = "Your Generated Password";
+        }
+        function reset(){
+            document.getElementById('first_name').value = "";
+            document.getElementById('dob').value = "";
+            document.getElementById('text_p').innerHTML = "Your Last Generated Password";
+        }
+    </script>
+</body>
+
+</html>
