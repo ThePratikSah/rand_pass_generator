@@ -35,3 +35,11 @@
     font-size: 12;
     color: white;
 }
+.download-title{
+    text-align: center;
+    font-family: serif;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
