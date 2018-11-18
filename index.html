@@ -8,6 +8,7 @@
     <meta name="description" content="Welcome to Random Password Generator. Here you can generate strong random password. It is completely free. You can also download it for your MacOS X, Windows 8 and later, Linux, etc. for using it ofline. Thanks for your visit.">
     <meta name="author" content="Pratik Sah">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,9 +22,9 @@
                 <div class="input-field col s12">
                     <input placeholder="First Name" id="first_name" type="text" class="validate">
                     <input placeholder="DOB - ddmmyyyy" id="dob" type="text" class="datepicker">
-                    <div class="row">
-                        <div class="col"><button class="waves-effect waves-light btn" onclick="randomStr()">Generate</button></div>
-                        <div class="col"><button class="waves-effect waves-light btn" onclick="reset()">Reset</button></div>
+                    <div class="row center">
+                        <button class="waves-effect waves-light btn" onclick="randomStr()">Generate</button>
+                        <button class="waves-effect waves-light btn" onclick="reset()">Reset</button>
                     </div>
                 </div>
                 <div class="get-pass">
@@ -35,6 +36,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- download section -->
+                <div class="row center">
+                    <p class="download-title">Download for your OS</p>
+                    <a href="https://www.mediafire.com/file/21182xjjcoe4lk1/Random_Password_Generator-1.0.0.dmg/file" class="waves-effect waves-light btn"><i class="fab fa-apple"></i> MacOS X</a>
+                    <a href="https://www.mediafire.com/file/2xicw2e7u887ujf/Random_Password_Generator_Setup_1.0.0.exe/file" class="waves-effect waves-light btn"><i class="fab fa-windows"></i> Windows</a>
                 </div>
                 <!-- copyright section -->
                 <p class="small mb-4 text-dark credit">&copy; 2018 Copyright. <a href="https://pratiksah.com" target="_blank">Pratik Sah</a></p>
